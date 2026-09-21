@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+.vite/
+frontend/.vite/
+
+# Production build
+dist/
+frontend/dist/
+
+# Python cache & virtual environment
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Database & SQLite runtime
+*.db-journal
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment variables
+.env
+.env.local

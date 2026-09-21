@@ -3,7 +3,9 @@
  * Manages SSE connection and simulation API calls for FraudGuard Live Simulation.
  */
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const isDev = import.meta.env.DEV;
+const rawBase = import.meta.env.VITE_API_URL || (isDev ? 'http://localhost:5000' : 'https://ai-cyber-fraud-analysis-sys.onrender.com');
+const API_BASE = rawBase.replace(/\/+$/, '');
 
 // ── SSE Manager ───────────────────────────────────────────────────────────────
 class SimulationSSEManager {

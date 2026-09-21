@@ -1041,9 +1041,16 @@ def simulation_status():
         return jsonify({"success": False, "error": str(e)}), 500
 
 
-@app.route("/api/live/events")
+@app.route("/api/live/events", methods=["GET", "OPTIONS"])
 def live_events():
     """Server-Sent Events (SSE) stream for real-time dashboard updates."""
+    if request.method == "OPTIONS":
+        resp = Response()
+        resp.headers["Access-Control-Allow-Origin"] = "*"
+        resp.headers["Access-Control-Allow-Headers"] = "Cache-Control, Content-Type, Authorization"
+        resp.headers["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+        return resp
+
     sid, q = sim.subscribe()
 
     @stream_with_context
@@ -1079,6 +1086,8 @@ def live_events():
             "Cache-Control": "no-cache",
             "X-Accel-Buffering": "no",
             "Connection": "keep-alive",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Cache-Control, Content-Type, Authorization",
         }
     )
 

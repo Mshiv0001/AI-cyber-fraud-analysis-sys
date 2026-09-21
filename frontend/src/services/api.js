@@ -1,4 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const isDev = import.meta.env.DEV;
+const rawBase = import.meta.env.VITE_API_URL || (isDev ? 'http://localhost:5000' : 'https://ai-cyber-fraud-analysis-sys.onrender.com');
+const API_BASE_URL = rawBase.replace(/\/+$/, '');
 
 /**
  * Check health of Flask ML backend

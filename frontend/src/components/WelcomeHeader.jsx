@@ -20,8 +20,8 @@ export default function WelcomeHeader({ user }) {
           Scan batch data. Detect fraud anomalies. Make a safer tomorrow.
         </p>
       </div>
-      <div className="shrink-0 flex flex-col items-start sm:items-end gap-1.5">
-        <p className="text-[13px] sm:text-[13.5px] font-semibold text-[#29466F] dark:text-[#94A3B8] welcome-date">
+      <div className="shrink-0 flex flex-col items-center gap-1.5 text-center">
+        <p className="text-[13px] sm:text-[13.5px] font-semibold text-[#29466F] dark:text-[#94A3B8] welcome-date text-center">
           {dateStr}
         </p>
         <div

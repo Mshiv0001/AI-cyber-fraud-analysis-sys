@@ -1,4 +1,4 @@
-# 🛡️ FraudGuard — Intelligent Fraud Detection & Artifact Correlator
+#  FraudGuard — Intelligent Fraud Detection & Artifact Correlator
 
 > **FraudGuard** helps you catch financial fraud as it happens.
 >
@@ -6,7 +6,7 @@
 
 ---
 
-## 🌟 Features
+##  Features
 
 - **Real-Time ML Fraud Scoring:** Evaluates transactions with sub-50ms latency using a temporal LightGBM model trained on financial transfer patterns.
 - **Digital Artifact Correlator:** Connects fragmented evidence—IP addresses, device fingerprints, transaction velocity bursts, and balance anomalies—into unified investigation cases.
@@ -18,7 +18,7 @@
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Prerequisites
 - **Node.js** (v18+ recommended)
@@ -42,7 +42,7 @@ npm run dev
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** React 19, Vite, TailwindCSS, Lucide Icons
 - **Backend:** Python, Flask, Server-Sent Events (SSE), SQLite

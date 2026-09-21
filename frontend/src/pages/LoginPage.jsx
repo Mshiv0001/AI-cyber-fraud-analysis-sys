@@ -37,8 +37,11 @@ export default function LoginPage({ onLogin }) {
       <FluidBackground />
 
       <div
-        className="relative z-10 w-full max-w-[400px] sm:max-w-[420px] my-auto flex flex-col items-center gap-5 sm:gap-6 py-4"
-        style={{ animation: 'fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both' }}
+        className="relative z-10 w-full max-w-[400px] sm:max-w-[420px] mx-auto my-auto flex flex-col items-center gap-5 sm:gap-6 py-4"
+        style={{
+          animation: 'loginCardFadeIn 0.5s cubic-bezier(0.16,1,0.3,1) both',
+          margin: 'auto auto',
+        }}
       >
         {/* Brand */}
         <div className="flex flex-col items-center gap-2.5 text-center">
@@ -161,8 +164,8 @@ export default function LoginPage({ onLogin }) {
       </div>
 
       <style>{`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(24px); }
+        @keyframes loginCardFadeIn {
+          from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>

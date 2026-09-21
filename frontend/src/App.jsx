@@ -636,13 +636,13 @@ export default function App() {
       </Routes>
 
       {toast && (
-        <div role="status" className="fixed bottom-5 left-1/2 z-[100] -translate-x-1/2 rounded-xl bg-[#0B1B3A] px-4 py-3 text-sm font-medium text-white shadow-xl" style={{ animation: 'fadeInUp 0.25s ease both' }}>
+        <div role="status" className="fixed bottom-5 left-1/2 z-[100] -translate-x-1/2 rounded-xl bg-[#0B1B3A] px-4 py-3 text-sm font-medium text-white shadow-xl" style={{ animation: 'toastFadeInUp 0.25s ease both' }}>
           {typeof toast === 'string' ? toast.replace(/[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/gu, '').trim() : toast}
         </div>
       )}
 
       <style>{`
-        @keyframes fadeInUp {
+        @keyframes toastFadeInUp {
           from { opacity: 0; transform: translate(-50%, 12px); }
           to   { opacity: 1; transform: translate(-50%, 0); }
         }

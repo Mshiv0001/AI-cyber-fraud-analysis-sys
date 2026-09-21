@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, Response, stream_with_context
 from flask_cors import CORS
+import os
 import joblib
 import pandas as pd
 from pathlib import Path
@@ -1258,8 +1259,9 @@ def mark_all_alerts_read():
 
 # ── Start Flask ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
     print("Fraud Detection Backend with Live Simulation")
     print(f"Model path: {MODEL_PATH}")
     print(f"Fraud threshold: {FRAUD_THRESHOLD}")
-    print("Server URL: http://localhost:5000")
-    app.run(host="0.0.0.0", port=5000, debug=True, threaded=True)
+    print(f"Server running on port: {port}")
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)

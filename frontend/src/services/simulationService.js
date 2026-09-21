@@ -3,7 +3,7 @@
  * Manages SSE connection and simulation API calls for FraudGuard Live Simulation.
  */
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 // ── SSE Manager ───────────────────────────────────────────────────────────────
 class SimulationSSEManager {

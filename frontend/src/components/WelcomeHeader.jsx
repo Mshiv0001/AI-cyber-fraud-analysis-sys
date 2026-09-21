@@ -20,8 +20,25 @@ export default function WelcomeHeader({ user }) {
           Scan batch data. Detect fraud anomalies. Make a safer tomorrow.
         </p>
       </div>
-      <div className="shrink-0 flex flex-col items-center gap-1.5 text-center">
-        <p className="text-[13px] sm:text-[13.5px] font-semibold text-[#29466F] dark:text-[#94A3B8] welcome-date text-center">
+      <div
+        className="welcome-date-container shrink-0 flex flex-col items-center justify-center gap-1.5 text-center"
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+        }}
+      >
+        <p
+          className="text-[13px] sm:text-[13.5px] font-semibold text-[#29466F] dark:text-[#94A3B8] welcome-date text-center"
+          style={{
+            margin: 0,
+            textAlign: 'center',
+            alignSelf: 'center',
+            width: '100%',
+          }}
+        >
           {dateStr}
         </p>
         <div
@@ -33,6 +50,8 @@ export default function WelcomeHeader({ user }) {
             gap: '4px',
             fontSize: '11px',
             fontWeight: 500,
+            alignSelf: 'center',
+            margin: '0 auto',
           }}
         >
           <svg width="12" height="12" viewBox="0 0 24 24" className="stay-alert-icon" style={{ flexShrink: 0 }} aria-hidden="true">

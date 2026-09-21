@@ -787,8 +787,18 @@ html[data-theme='dark'] .kpi-card .kpi-card-footer {
    WELCOME HEADER BADGE & DATE
    ============================================================ */
 
+.welcome-date-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
 .welcome-date {
   color: #29466F;
+  text-align: center !important;
+  align-self: center !important;
 }
 
 .stay-alert-badge {
@@ -797,6 +807,8 @@ html[data-theme='dark'] .kpi-card .kpi-card-footer {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.75);
   color: #29466F;
+  align-self: center !important;
+  margin: 0 auto !important;
 }
 
 .stay-alert-icon {
